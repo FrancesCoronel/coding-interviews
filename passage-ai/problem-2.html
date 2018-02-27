@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .row {
+    border: 1px solid black;
+    border-bottom: 0;
+    border-right: 0;
+    border-collapse: collapse;
+  }
+
+  .row::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  .row .col {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5em;
+    display: table-cell;
+    width: 100%;
+    min-height: 10em;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  @media screen and (min-width: 360px) {
+    .row .col {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 720px) {
+    .row .col {
+      width: 25%;
+    }
+  }
+</style>
+
+<body>
+  <div class="row">
+    <div class="col">Column 1</div>
+    <div class="col">Column 2</div>
+    <div class="col">Column 3</div>
+    <div class="col">Column 4</div>
+  </div>
+</body>
+
+</html>
